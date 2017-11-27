@@ -87,6 +87,8 @@ namespace EFConsoleApp
         public static void SeedStudents(ClubContext context)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
+            // You'll need to change this reference in the Club MVC app
+            // as it has a different namespace
             string resourceName = "EFConsoleApp.Migrations.TestStudents.csv";
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
@@ -103,6 +105,8 @@ namespace EFConsoleApp
         public static void SeedCourses(ClubContext context)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
+            // You'll need to change this reference in the Club MVC app
+            // as it has a different namespace
             string resourceName = "EFConsoleApp.Migrations.Courses.csv";
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
